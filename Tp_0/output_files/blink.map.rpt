@@ -1,5 +1,5 @@
 Analysis & Synthesis report for blink
-Fri Dec 12 14:50:21 2025
+Fri Dec 12 16:28:46 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,10 +13,11 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -42,16 +43,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Dec 12 14:50:20 2025       ;
+; Analysis & Synthesis Status        ; Successful - Fri Dec 12 16:28:46 2025       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; blink                                       ;
 ; Top-level Entity Name              ; blink                                       ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 25                                          ;
-;     Total combinational functions  ; 25                                          ;
-;     Dedicated logic registers      ; 25                                          ;
-; Total registers                    ; 25                                          ;
-; Total pins                         ; 3                                           ;
+; Total logic elements               ; 52                                          ;
+;     Total combinational functions  ; 52                                          ;
+;     Dedicated logic registers      ; 29                                          ;
+; Total registers                    ; 29                                          ;
+; Total pins                         ; 4                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -66,7 +67,7 @@ refer to the applicable agreement for further details.
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                           ; 10M08DAF484C8G     ;                    ;
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
 ; Top-level entity name                                            ; blink              ; blink              ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
@@ -178,30 +179,30 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 25        ;
+; Estimated Total logic elements              ; 52        ;
 ;                                             ;           ;
-; Total combinational functions               ; 25        ;
+; Total combinational functions               ; 52        ;
 ; Logic element usage by number of LUT inputs ;           ;
 ;     -- 4 input functions                    ; 0         ;
-;     -- 3 input functions                    ; 1         ;
-;     -- <=2 input functions                  ; 24        ;
+;     -- 3 input functions                    ; 2         ;
+;     -- <=2 input functions                  ; 50        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 2         ;
-;     -- arithmetic mode                      ; 23        ;
+;     -- normal mode                          ; 3         ;
+;     -- arithmetic mode                      ; 49        ;
 ;                                             ;           ;
-; Total registers                             ; 25        ;
-;     -- Dedicated logic registers            ; 25        ;
+; Total registers                             ; 29        ;
+;     -- Dedicated logic registers            ; 29        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 3         ;
+; I/O pins                                    ; 4         ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 25        ;
-; Total fan-out                               ; 128       ;
-; Average fan-out                             ; 2.29      ;
+; Maximum fan-out                             ; 29        ;
+; Total fan-out                               ; 196       ;
+; Average fan-out                             ; 2.20      ;
 +---------------------------------------------+-----------+
 
 
@@ -210,9 +211,43 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |blink                     ; 25 (25)             ; 25 (25)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 3    ; 0            ; 0          ; |blink              ; blink       ; work         ;
+; |blink                     ; 52 (52)             ; 29 (29)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 4    ; 0            ; 0          ; |blink              ; blink       ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------+
+; Registers Removed During Synthesis                             ;
++----------------------------------------+-----------------------+
+; Register name                          ; Reason for Removal    ;
++----------------------------------------+-----------------------+
+; count2[0]                              ; Merged with count[0]  ;
+; count2[1]                              ; Merged with count[1]  ;
+; count2[2]                              ; Merged with count[2]  ;
+; count2[3]                              ; Merged with count[3]  ;
+; count2[4]                              ; Merged with count[4]  ;
+; count2[5]                              ; Merged with count[5]  ;
+; count2[6]                              ; Merged with count[6]  ;
+; count2[7]                              ; Merged with count[7]  ;
+; count2[8]                              ; Merged with count[8]  ;
+; count2[9]                              ; Merged with count[9]  ;
+; count2[10]                             ; Merged with count[10] ;
+; count2[11]                             ; Merged with count[11] ;
+; count2[12]                             ; Merged with count[12] ;
+; count2[13]                             ; Merged with count[13] ;
+; count2[14]                             ; Merged with count[14] ;
+; count2[15]                             ; Merged with count[15] ;
+; count2[16]                             ; Merged with count[16] ;
+; count2[17]                             ; Merged with count[17] ;
+; count2[18]                             ; Merged with count[18] ;
+; count2[19]                             ; Merged with count[19] ;
+; count2[20]                             ; Merged with count[20] ;
+; count2[21]                             ; Merged with count[21] ;
+; count2[22]                             ; Merged with count[22] ;
+; count2[23]                             ; Merged with count[23] ;
+; count2[28..32]                         ; Lost fanout           ;
+; Total Number of Removed Registers = 29 ;                       ;
++----------------------------------------+-----------------------+
 
 
 +------------------------------------------------------+
@@ -220,10 +255,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 25    ;
+; Total registers                              ; 29    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 25    ;
+; Number of registers using Asynchronous Clear ; 29    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -235,18 +270,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 3                           ;
-; cycloneiii_ff         ; 25                          ;
-;     CLR               ; 25                          ;
-; cycloneiii_lcell_comb ; 25                          ;
-;     arith             ; 23                          ;
-;         2 data inputs ; 22                          ;
-;         3 data inputs ; 1                           ;
-;     normal            ; 2                           ;
-;         1 data inputs ; 2                           ;
+; boundary_port         ; 4                           ;
+; cycloneiii_ff         ; 29                          ;
+;     CLR               ; 29                          ;
+; cycloneiii_lcell_comb ; 52                          ;
+;     arith             ; 49                          ;
+;         2 data inputs ; 47                          ;
+;         3 data inputs ; 2                           ;
+;     normal            ; 3                           ;
+;         1 data inputs ; 3                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.30                        ;
-; Average LUT depth     ; 2.45                        ;
+; Max LUT depth         ; 3.60                        ;
+; Average LUT depth     ; 2.78                        ;
 +-----------------------+-----------------------------+
 
 
@@ -265,25 +300,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Dec 12 14:50:01 2025
+    Info: Processing started: Fri Dec 12 16:28:27 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off blink -c blink
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file blink.vhd
-    Info (12022): Found design unit 1: blink-Behavioral File: C:/Users/elkat/Documents/Github/Projet_FPGA_polytech_sorbonne_2025_2026/Tp_0/blink.vhd Line: 11
+    Info (12022): Found design unit 1: blink-Behavioral File: C:/Users/elkat/Documents/Github/Projet_FPGA_polytech_sorbonne_2025_2026/Tp_0/blink.vhd Line: 12
     Info (12023): Found entity 1: blink File: C:/Users/elkat/Documents/Github/Projet_FPGA_polytech_sorbonne_2025_2026/Tp_0/blink.vhd Line: 5
 Info (12127): Elaborating entity "blink" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 5 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 28 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 56 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 25 logic cells
+    Info (21059): Implemented 2 output pins
+    Info (21061): Implemented 52 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4841 megabytes
-    Info: Processing ended: Fri Dec 12 14:50:21 2025
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:38
+    Info: Processing ended: Fri Dec 12 16:28:46 2025
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:40
 
 

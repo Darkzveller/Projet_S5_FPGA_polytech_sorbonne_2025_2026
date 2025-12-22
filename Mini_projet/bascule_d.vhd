@@ -16,7 +16,7 @@ begin
 process(clk, rst_n)
 begin
     if rst_n = '0' then
-        Q <= '0';  -- remise à zéro asynchrone
+        Q <= (others => '0');  -- remise à zéro asynchrone
     elsif rising_edge(clk) then
         if enable = '1' then
             Q <= D;  -- transfert de D vers Q si enable actif

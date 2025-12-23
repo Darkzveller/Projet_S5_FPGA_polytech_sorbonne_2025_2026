@@ -7,7 +7,11 @@ entity top_module is
         rst_n    : in  STD_LOGIC;
         KEY0     : in  STD_LOGIC;
         Busint   : in  STD_LOGIC_VECTOR(3 downto 0);
-        Buscode  : out STD_LOGIC_VECTOR(15 downto 0)
+        Buscode  : out STD_LOGIC_VECTOR(15 downto 0);
+        HEX0 : out STD_LOGIC_VECTOR(6 downto 0);
+        HEX1 : out STD_LOGIC_VECTOR(6 downto 0);
+        HEX2 : out STD_LOGIC_VECTOR(6 downto 0);
+        HEX3 : out STD_LOGIC_VECTOR(6 downto 0)
     );
 end top_module;
 
@@ -45,5 +49,19 @@ begin
 
     -- On regroupe tout pour la sortie 16 bits
     Buscode <= q4 & q3 & q2 & q1;
-
+    -- HEX0 : affiche les bits 0 à 3 (le dernier chiffre saisi)
+    AFF0 : entity work.decodeur_7_seg
+        port map ( entree_4bits => q1, segments => HEX0 );
+    
+    -- HEX1 : affiche les bits 4 à 7
+    AFF1 : entity work.decodeur_7_seg
+        port map ( entree_4bits => q2, segments => HEX1 );
+    
+    -- HEX2 : affiche les bits 8 à 11
+    AFF2 : entity work.decodeur_7_seg
+        port map ( entree_4bits => q3, segments => HEX2 );
+    
+    -- HEX3 : affiche les bits 12 à 15 (le premier chiffre saisi)
+    AFF3 : entity work.decodeur_7_seg
+        port map ( entree_4bits => q4, segments => HEX3 );
 end architecture;

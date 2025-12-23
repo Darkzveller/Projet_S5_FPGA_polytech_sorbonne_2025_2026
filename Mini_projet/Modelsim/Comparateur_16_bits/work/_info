@@ -1,0 +1,129 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/elkat/Documents/Github/Projet_FPGA_polytech_sorbonne_2025_2026/Mini_projet/Modelsim/Comparateur_16_bits
+Ecomparateur_16bits
+Z1 w1766510813
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8comparateur_16bits.vhd
+Z5 Fcomparateur_16bits.vhd
+l0
+L4
+VESlE<E[?I8MR6PGT5]S@L1
+!s100 @MU<NGd@RDm^g7QPMd1m=0
+Z6 OV;C;10.5b;63
+31
+Z7 !s110 1766511210
+!i10b 1
+Z8 !s108 1766511209.000000
+Z9 !s90 -reportprogress|300|-93|comparateur_16bits.vhd|
+Z10 !s107 comparateur_16bits.vhd|
+!i113 1
+o-93
+Z11 tExplicit 1 CvgOpt 0
+Astructural
+Z12 DEx4 work 17 comparateur_4bits 0 22 eGTX8icF`_Ch1N0RlZ<8]0
+R2
+R3
+Z13 DEx4 work 18 comparateur_16bits 0 22 ESlE<E[?I8MR6PGT5]S@L1
+l14
+L11
+VIzX:L0h44:a?43hIh^Jb]0
+!s100 0i_QiXWFilVUI2Y;G>nT13
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+o-93
+R11
+Ecomparateur_4bits
+Z14 w1766510435
+R2
+R3
+R0
+Z15 8comparateur_4bits.vhd
+Z16 Fcomparateur_4bits.vhd
+l0
+L6
+VeGTX8icF`_Ch1N0RlZ<8]0
+!s100 E_T^h``PeTo1=I3SZI?VC0
+R6
+31
+Z17 !s110 1766511209
+!i10b 1
+R8
+Z18 !s90 -reportprogress|300|-93|comparateur_4bits.vhd|
+Z19 !s107 comparateur_4bits.vhd|
+!i113 1
+o-93
+R11
+Abehavioral
+R2
+R3
+R12
+l15
+L14
+V>Yj8;M7bgR^<Cob>1KWoP3
+!s100 h>FOajF?b`K]:mKT@47f;0
+R6
+31
+R17
+!i10b 1
+R8
+R18
+R19
+!i113 1
+o-93
+R11
+Etb_comparateur_16bits
+Z20 w1766510825
+R2
+R3
+R0
+Z21 8comparateur_16bits_tb.vhd
+Z22 Fcomparateur_16bits_tb.vhd
+l0
+L4
+Vj1J2@K9@zm<O19M2nNj331
+!s100 eMfGP1C^g;E8fm82T`TmV1
+R6
+31
+R7
+!i10b 1
+Z23 !s108 1766511210.000000
+Z24 !s90 -reportprogress|300|-93|comparateur_16bits_tb.vhd|
+Z25 !s107 comparateur_16bits_tb.vhd|
+!i113 1
+o-93
+R11
+Abehavioral
+R13
+R2
+R3
+DEx4 work 21 tb_comparateur_16bits 0 22 j1J2@K9@zm<O19M2nNj331
+l10
+L7
+V5>[d_Cn;<G4hMC_S93o@a3
+!s100 7O4UhbSA@l8fXEkkB82E<2
+R6
+31
+R7
+!i10b 1
+R23
+R24
+R25
+!i113 1
+o-93
+R11

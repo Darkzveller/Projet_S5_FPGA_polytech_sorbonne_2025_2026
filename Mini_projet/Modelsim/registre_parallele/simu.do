@@ -1,4 +1,5 @@
 vlib work
+vcom -93 bascule_d.vhd
 
 vcom -93 registre_changement_parallele.vhd
 vcom -93 registre_changement_parallele_tb.vhd

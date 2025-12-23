@@ -8,85 +8,146 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/elkat/Documents/Github/Projet_FPGA_polytech_sorbonne_2025_2026/Mini_projet/registre_parallele
-Eregistre_changement_parallele
-Z1 w1766446921
+Ebascule_d
+Z1 w1766445812
 Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-R0
-Z5 8registre_changement_parallele.vhd
-Z6 Fregistre_changement_parallele.vhd
+Z5 dC:/Users/elkat/Documents/Github/Projet_FPGA_polytech_sorbonne_2025_2026/Mini_projet/Modelsim/registre_parallele
+Z6 8bascule_d.vhd
+Z7 Fbascule_d.vhd
 l0
-L6
-VnhB=S>c=?Ueh:4:kROFML2
-!s100 ICgQ4mGg@LQAB?_Nic0>Q1
-Z7 OV;C;10.5b;63
+L5
+V<^YPQY3cL;aE^`0<VN7C73
+!s100 ]OXG>DEQMk_5?Q7U[_UW31
+Z8 OV;C;10.5b;63
 31
-Z8 !s110 1766447065
+Z9 !s110 1766508342
 !i10b 1
-Z9 !s108 1766447065.000000
-Z10 !s90 -reportprogress|300|-93|registre_changement_parallele.vhd|
-Z11 !s107 registre_changement_parallele.vhd|
+Z10 !s108 1766508342.000000
+Z11 !s90 -reportprogress|300|-93|bascule_d.vhd|
+Z12 !s107 bascule_d.vhd|
 !i113 1
 o-93
-Z12 tExplicit 1 CvgOpt 0
+Z13 tExplicit 1 CvgOpt 0
 Abehavioral
 R2
 R3
 R4
-Z13 DEx4 work 29 registre_changement_parallele 0 22 nhB=S>c=?Ueh:4:kROFML2
+Z14 DEx4 work 9 bascule_d 0 22 <^YPQY3cL;aE^`0<VN7C73
+l17
+L14
+VBgzdXN3IBdWWg;PUehQ[[1
+!s100 O6ho[Ff_CA<EFbT>;<^Wc0
+R8
+31
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+o-93
+R13
+Eregistre_changement_parallele
+Z15 w1766508274
+R3
+R4
+R5
+Z16 8registre_changement_parallele.vhd
+Z17 Fregistre_changement_parallele.vhd
+l0
+L4
+V]FjfJm8Zd1K0=>gfJHAO10
+!s100 @zD5Wj5fQ3JPWbQh?EKjQ1
+R8
+31
+Z18 !s110 1766508343
+!i10b 1
+R10
+Z19 !s90 -reportprogress|300|-93|registre_changement_parallele.vhd|
+Z20 !s107 registre_changement_parallele.vhd|
+!i113 1
+o-93
+R13
+Astructural
+R2
+R14
+R3
+R4
+Z21 DEx4 work 29 registre_changement_parallele 0 22 ]FjfJm8Zd1K0=>gfJHAO10
+l15
+L14
+V0I6Bf?i3RKiWQoO3cZKXC2
+!s100 zl8ma=2LhBYjR_3B6MKMN1
+R8
+31
+R18
+!i10b 1
+R10
+R19
+R20
+!i113 1
+o-93
+R13
+Abehavioral
+R2
+R3
+R4
+Z22 DEx4 work 29 registre_changement_parallele 0 22 nhB=S>c=?Ueh:4:kROFML2
 l17
 L14
 Vl5LAKG3_1dnoUZ<4m9FDC3
 !s100 kXS?f4YclY4aJCcFR@cg41
-R7
-31
 R8
+31
+Z23 !s110 1766447065
 !i10b 1
-R9
-R10
-R11
+Z24 !s108 1766447065.000000
+R19
+R20
 !i113 1
 o-93
-R12
+R13
+R0
+w1766446921
 Etb_registre
-Z14 w1766446579
+Z25 w1766446579
 R3
 R4
-R0
-Z15 8registre_changement_parallele_tb.vhd
-Z16 Fregistre_changement_parallele_tb.vhd
+R5
+Z26 8registre_changement_parallele_tb.vhd
+Z27 Fregistre_changement_parallele_tb.vhd
 l0
 L4
 VAK7;obH2o9c9RCKTEkbnh2
 !s100 6;`VRoi60PF7e05:d^[e53
-R7
-31
 R8
+31
+R18
 !i10b 1
-R9
-Z17 !s90 -reportprogress|300|-93|registre_changement_parallele_tb.vhd|
-Z18 !s107 registre_changement_parallele_tb.vhd|
+Z28 !s108 1766508343.000000
+Z29 !s90 -reportprogress|300|-93|registre_changement_parallele_tb.vhd|
+Z30 !s107 registre_changement_parallele_tb.vhd|
 !i113 1
 o-93
-R12
-Atest
-R2
 R13
+Atest
+R21
 R3
 R4
-Z19 DEx4 work 11 tb_registre 0 22 AK7;obH2o9c9RCKTEkbnh2
+Z31 DEx4 work 11 tb_registre 0 22 AK7;obH2o9c9RCKTEkbnh2
 l10
 L7
-Z20 VF^^H9kURN7NJEL1JG^`RH3
-Z21 !s100 l3W9_QJboo>65e`0KeFBg3
-R7
-31
+Z32 VF^^H9kURN7NJEL1JG^`RH3
+Z33 !s100 l3W9_QJboo>65e`0KeFBg3
 R8
-!i10b 1
-R9
-R17
+31
 R18
+!i10b 1
+R28
+R29
+R30
 !i113 1
 o-93
-R12
+R13

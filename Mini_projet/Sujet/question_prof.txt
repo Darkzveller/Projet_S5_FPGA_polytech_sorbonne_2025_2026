@@ -1,0 +1,12 @@
+Bonjour Monsieur, 
+
+Je me permet de vous contacter au sujet du mini projet a effectuer en électronique numérique sur le langage de programmation VHDL.
+
+J'ai quelques questions qui me trottent.
+
+Au sein de la partie 4. Module a concevoir, 
+
+Les codes écrits entre la partie 4.1 a 4.4, devront etre instancer dans le top module ?
+
+Les codes écrits entre la partie 4.5 à 4.8, sont des codes en vhdl avec leurs test bench, dont on ne doit pas inclure dans le top module précédemment créer ?
+

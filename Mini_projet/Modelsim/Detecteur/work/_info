@@ -1,0 +1,114 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/elkat/Documents/Github/Projet_FPGA_polytech_sorbonne_2025_2026/Mini_projet/Detecteur
+Edetecteur_de_front
+Z1 w1766445251
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8detecteur_de_front.vhd
+Z6 Fdetecteur_de_front.vhd
+l0
+L5
+Vj0:[>9SYNif355=@a;9CQ2
+!s100 =ioAcP?XVQANU`WLelL5>1
+Z7 OV;C;10.5b;63
+31
+Z8 !s110 1766445259
+!i10b 1
+Z9 !s108 1766445258.000000
+Z10 !s90 -reportprogress|300|-93|detecteur_de_front.vhd|
+Z11 !s107 detecteur_de_front.vhd|
+!i113 1
+o-93
+Z12 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+R4
+Z13 DEx4 work 18 detecteur_de_front 0 22 j0:[>9SYNif355=@a;9CQ2
+l15
+L12
+V;S:L8kBK<XK7;7lhHe]eV2
+!s100 Kemled;N1J_mDbbbMHlAE1
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+o-93
+R12
+Etb_detecteur
+Z14 w1766444462
+R2
+R3
+R4
+R0
+Z15 8detecteur_de_front_tb.vhd
+Z16 Fdetecteur_de_front_tb.vhd
+l0
+L30
+V[TQ531TD5@ViUY9lKZ?Q43
+!s100 :;O62;_z1f0Ochh4gM<iT1
+R7
+31
+R8
+!i10b 1
+Z17 !s108 1766445259.000000
+Z18 !s90 -reportprogress|300|-93|detecteur_de_front_tb.vhd|
+Z19 !s107 detecteur_de_front_tb.vhd|
+!i113 1
+o-93
+R12
+Abench
+R13
+R2
+R3
+R4
+Z20 DEx4 work 12 tb_detecteur 0 22 [TQ531TD5@ViUY9lKZ?Q43
+l38
+L33
+Z21 VcFS5]Oz;J[oF?4JXWk<:40
+Z22 !s100 Z2=ja7iIdh@a4UDbll=8>3
+R7
+31
+R8
+!i10b 1
+R17
+R18
+R19
+!i113 1
+o-93
+R12
+Atest
+R2
+R13
+R3
+R4
+DEx4 work 12 tb_detecteur 0 22 lbRzJj@]6?hNV2N>6NneB2
+l9
+L7
+V::oW3<CC[3lHZNid;=_g_2
+!s100 ]<SPUNd1>@4ZX0WoN7Y942
+R7
+31
+!s110 1766443065
+!i10b 1
+!s108 1766443065.000000
+R18
+R19
+!i113 1
+o-93
+R12
+w1766439595

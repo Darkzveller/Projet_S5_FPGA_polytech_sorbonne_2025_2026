@@ -14,8 +14,6 @@ architecture Behavioral of detecteur_de_front is
 signal KEY0_prec : STD_LOGIC;
 begin
 
-Detectar <= KEY0;
-
 process(clk, rst_n)
 
 begin
@@ -30,7 +28,7 @@ elsif rising_edge(clk) then
         Detectar <= '1'; 
     else 
     Detectar <= '0';
-    end if
+    end if;
     KEY0_prec <= KEY0; 
 
 end if;

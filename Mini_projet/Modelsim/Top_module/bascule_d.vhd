@@ -10,20 +10,22 @@ entity bascule_D is
            Q      : out STD_LOGIC);
 end entity;
 
+
 architecture Behavioral of bascule_D is
+signal q_interne_memoire : STD_LOGIC;
+
 begin
 
 process(clk, rst_n)
 begin
     if rst_n = '0' then
-        Q <= (others => '0');  -- remise à zéro asynchrone
+        q_interne_memoire <= '0';  -- remise à zéro asynchrone
     elsif rising_edge(clk) then
         if enable = '1' then
-            Q <= D;  -- transfert de D vers Q si enable actif
+            q_interne_memoire <= D;  -- transfert de D vers Q si enable actif
         else
-            Q <= Q;  -- conserve la valeur précédente
         end if;
     end if;
 end process;
-
+Q <= q_interne_memoire;
 end architecture;

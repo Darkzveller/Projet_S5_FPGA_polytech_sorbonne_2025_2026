@@ -1,0 +1,1 @@
+do C:/Users/elkat/Documents/Github/Projet_FPGA_polytech_sorbonne_2025_2026/Mini_projet/Detecteur/simu.do

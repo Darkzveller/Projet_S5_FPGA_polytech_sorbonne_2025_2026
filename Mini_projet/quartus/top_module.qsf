@@ -58,7 +58,7 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_B8 -to rst_n
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rst_n
-set_location_assignment PIN_V11 -to clk
+set_location_assignment PIN_P11 -to clk
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk
 set_location_assignment PIN_A8 -to Ouverture
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY0
@@ -66,8 +66,8 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Ouverture
 set_location_assignment PIN_A7 -to KEY0
 set_location_assignment PIN_C10 -to Busint[0]
 set_location_assignment PIN_C11 -to Busint[1]
-set_location_assignment PIN_C12 -to Busint[2]
-set_location_assignment PIN_C13 -to Busint[3]
+set_location_assignment PIN_D12 -to Busint[2]
+set_location_assignment PIN_C12 -to Busint[3]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Busint[3]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Busint[2]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Busint[1]

@@ -9,7 +9,6 @@ architecture Behavioral of top_module_tb is
     signal rst_n     : STD_LOGIC := '0';
     signal KEY0      : STD_LOGIC := '0';
     signal Busint    : STD_LOGIC_VECTOR(3 downto 0) := "0000";
-    signal Buscode   : STD_LOGIC_VECTOR(15 downto 0);
     signal HEX0, HEX1, HEX2, HEX3 : STD_LOGIC_VECTOR(6 downto 0);
     signal Ouverture : STD_LOGIC;
 
@@ -20,7 +19,7 @@ begin
     uut: entity work.top_module
         port map (
             clk => clk, rst_n => rst_n, KEY0 => KEY0, Busint => Busint,
-            Buscode => Buscode, HEX0 => HEX0, HEX1 => HEX1, HEX2 => HEX2,
+             HEX0 => HEX0, HEX1 => HEX1, HEX2 => HEX2,
             HEX3 => HEX3, Ouverture => Ouverture
         );
 

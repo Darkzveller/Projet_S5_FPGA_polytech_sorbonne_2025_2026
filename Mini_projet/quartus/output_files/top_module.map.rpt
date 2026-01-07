@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_module
-Wed Jan 07 16:21:15 2026
+Wed Jan 07 16:45:07 2026
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,14 +14,13 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Inverted Register Statistics
- 10. Port Connectivity Checks: "comparateur_16bits:U_COMP|comparateur_4bits:comp3"
- 11. Port Connectivity Checks: "comparateur_16bits:U_COMP|comparateur_4bits:comp2"
- 12. Port Connectivity Checks: "comparateur_16bits:U_COMP|comparateur_4bits:comp1"
- 13. Port Connectivity Checks: "comparateur_16bits:U_COMP|comparateur_4bits:comp0"
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+  9. Port Connectivity Checks: "comparateur_16bits:U_COMP|comparateur_4bits:comp3"
+ 10. Port Connectivity Checks: "comparateur_16bits:U_COMP|comparateur_4bits:comp2"
+ 11. Port Connectivity Checks: "comparateur_16bits:U_COMP|comparateur_4bits:comp1"
+ 12. Port Connectivity Checks: "comparateur_16bits:U_COMP|comparateur_4bits:comp0"
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -47,16 +46,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jan 07 16:21:15 2026       ;
+; Analysis & Synthesis Status        ; Successful - Wed Jan 07 16:45:07 2026       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; top_module                                  ;
 ; Top-level Entity Name              ; top_module                                  ;
 ; Family                             ; MAX 10                                      ;
 ; Total logic elements               ; 51                                          ;
-;     Total combinational functions  ; 35                                          ;
+;     Total combinational functions  ; 34                                          ;
 ;     Dedicated logic registers      ; 18                                          ;
 ; Total registers                    ; 18                                          ;
-; Total pins                         ; 52                                          ;
+; Total pins                         ; 36                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -191,28 +190,28 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Estimated Total logic elements              ; 51        ;
 ;                                             ;           ;
-; Total combinational functions               ; 35        ;
+; Total combinational functions               ; 34        ;
 ; Logic element usage by number of LUT inputs ;           ;
 ;     -- 4 input functions                    ; 33        ;
 ;     -- 3 input functions                    ; 0         ;
-;     -- <=2 input functions                  ; 2         ;
+;     -- <=2 input functions                  ; 1         ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 35        ;
+;     -- normal mode                          ; 34        ;
 ;     -- arithmetic mode                      ; 0         ;
 ;                                             ;           ;
 ; Total registers                             ; 18        ;
 ;     -- Dedicated logic registers            ; 18        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 52        ;
+; I/O pins                                    ; 36        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 18        ;
-; Total fan-out                               ; 302       ;
-; Average fan-out                             ; 1.92      ;
+; Total fan-out                               ; 269       ;
+; Average fan-out                             ; 2.17      ;
 +---------------------------------------------+-----------+
 
 
@@ -221,13 +220,13 @@ refer to the applicable agreement for further details.
 +-----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------+-------------------------------+--------------+
 ; Compilation Hierarchy Node              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                           ; Entity Name                   ; Library Name ;
 +-----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------+-------------------------------+--------------+
-; |top_module                             ; 35 (0)              ; 18 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 52   ; 0            ; 0          ; |top_module                                                   ; top_module                    ; work         ;
+; |top_module                             ; 34 (0)              ; 18 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 36   ; 0            ; 0          ; |top_module                                                   ; top_module                    ; work         ;
 ;    |comparateur_16bits:U_COMP|          ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_module|comparateur_16bits:U_COMP                         ; comparateur_16bits            ; work         ;
 ;    |decodeur_7_seg:AFF0|                ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_module|decodeur_7_seg:AFF0                               ; decodeur_7_seg                ; work         ;
 ;    |decodeur_7_seg:AFF1|                ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_module|decodeur_7_seg:AFF1                               ; decodeur_7_seg                ; work         ;
 ;    |decodeur_7_seg:AFF2|                ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_module|decodeur_7_seg:AFF2                               ; decodeur_7_seg                ; work         ;
 ;    |decodeur_7_seg:AFF3|                ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_module|decodeur_7_seg:AFF3                               ; decodeur_7_seg                ; work         ;
-;    |detecteur_de_front:U_DET|           ; 2 (2)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_module|detecteur_de_front:U_DET                          ; detecteur_de_front            ; work         ;
+;    |detecteur_de_front:U_DET|           ; 1 (1)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_module|detecteur_de_front:U_DET                          ; detecteur_de_front            ; work         ;
 ;    |registre_changement_parallele:REG1| ; 0 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_module|registre_changement_parallele:REG1                ; registre_changement_parallele ; work         ;
 ;       |bascule_D:bit0|                  ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_module|registre_changement_parallele:REG1|bascule_D:bit0 ; bascule_D                     ; work         ;
 ;       |bascule_D:bit1|                  ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_module|registre_changement_parallele:REG1|bascule_D:bit1 ; bascule_D                     ; work         ;
@@ -265,16 +264,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Clock Enable       ; 16    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; detecteur_de_front:U_DET|KEY0_prec     ; 1       ;
-; Total number of inverted registers = 1 ;         ;
-+----------------------------------------+---------+
 
 
 +-------------------------------------------------------------------------------+
@@ -324,18 +313,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 52                          ;
+; boundary_port         ; 36                          ;
 ; cycloneiii_ff         ; 18                          ;
 ;     CLR               ; 2                           ;
 ;     ENA CLR           ; 16                          ;
-; cycloneiii_lcell_comb ; 39                          ;
-;     normal            ; 39                          ;
-;         1 data inputs ; 5                           ;
+; cycloneiii_lcell_comb ; 38                          ;
+;     normal            ; 38                          ;
+;         1 data inputs ; 4                           ;
 ;         2 data inputs ; 1                           ;
 ;         4 data inputs ; 33                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.34                        ;
+; Average LUT depth     ; 1.35                        ;
 +-----------------------+-----------------------------+
 
 
@@ -354,12 +343,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Jan 07 16:21:03 2026
+    Info: Processing started: Wed Jan 07 16:44:54 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top_module -c top_module
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file top_module.vhd
-    Info (12022): Found design unit 1: top_module-Structural File: C:/Users/elkat/Documents/Github/Projet_FPGA_polytech_sorbonne_2025_2026/Mini_projet/quartus/top_module.vhd Line: 18
+    Info (12022): Found design unit 1: top_module-Structural File: C:/Users/elkat/Documents/Github/Projet_FPGA_polytech_sorbonne_2025_2026/Mini_projet/quartus/top_module.vhd Line: 17
     Info (12023): Found entity 1: top_module File: C:/Users/elkat/Documents/Github/Projet_FPGA_polytech_sorbonne_2025_2026/Mini_projet/quartus/top_module.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file registre_changement_parallele.vhd
     Info (12022): Found design unit 1: registre_changement_parallele-Structural File: C:/Users/elkat/Documents/Github/Projet_FPGA_polytech_sorbonne_2025_2026/Mini_projet/quartus/registre_changement_parallele.vhd Line: 14
@@ -380,25 +369,23 @@ Info (12021): Found 2 design units, including 1 entities, in source file bascule
     Info (12022): Found design unit 1: bascule_D-Behavioral File: C:/Users/elkat/Documents/Github/Projet_FPGA_polytech_sorbonne_2025_2026/Mini_projet/quartus/bascule_d.vhd Line: 14
     Info (12023): Found entity 1: bascule_D File: C:/Users/elkat/Documents/Github/Projet_FPGA_polytech_sorbonne_2025_2026/Mini_projet/quartus/bascule_d.vhd Line: 5
 Info (12127): Elaborating entity "top_module" for the top level hierarchy
-Info (12128): Elaborating entity "detecteur_de_front" for hierarchy "detecteur_de_front:U_DET" File: C:/Users/elkat/Documents/Github/Projet_FPGA_polytech_sorbonne_2025_2026/Mini_projet/quartus/top_module.vhd Line: 26
-Info (12128): Elaborating entity "registre_changement_parallele" for hierarchy "registre_changement_parallele:REG1" File: C:/Users/elkat/Documents/Github/Projet_FPGA_polytech_sorbonne_2025_2026/Mini_projet/quartus/top_module.vhd Line: 36
+Info (12128): Elaborating entity "detecteur_de_front" for hierarchy "detecteur_de_front:U_DET" File: C:/Users/elkat/Documents/Github/Projet_FPGA_polytech_sorbonne_2025_2026/Mini_projet/quartus/top_module.vhd Line: 25
+Info (12128): Elaborating entity "registre_changement_parallele" for hierarchy "registre_changement_parallele:REG1" File: C:/Users/elkat/Documents/Github/Projet_FPGA_polytech_sorbonne_2025_2026/Mini_projet/quartus/top_module.vhd Line: 35
 Info (12128): Elaborating entity "bascule_D" for hierarchy "registre_changement_parallele:REG1|bascule_D:bit0" File: C:/Users/elkat/Documents/Github/Projet_FPGA_polytech_sorbonne_2025_2026/Mini_projet/quartus/registre_changement_parallele.vhd Line: 20
-Info (12128): Elaborating entity "comparateur_16bits" for hierarchy "comparateur_16bits:U_COMP" File: C:/Users/elkat/Documents/Github/Projet_FPGA_polytech_sorbonne_2025_2026/Mini_projet/quartus/top_module.vhd Line: 56
+Info (12128): Elaborating entity "comparateur_16bits" for hierarchy "comparateur_16bits:U_COMP" File: C:/Users/elkat/Documents/Github/Projet_FPGA_polytech_sorbonne_2025_2026/Mini_projet/quartus/top_module.vhd Line: 54
 Info (12128): Elaborating entity "comparateur_4bits" for hierarchy "comparateur_16bits:U_COMP|comparateur_4bits:comp0" File: C:/Users/elkat/Documents/Github/Projet_FPGA_polytech_sorbonne_2025_2026/Mini_projet/quartus/comparateur_16bits.vhd Line: 17
-Info (12128): Elaborating entity "decodeur_7_seg" for hierarchy "decodeur_7_seg:AFF0" File: C:/Users/elkat/Documents/Github/Projet_FPGA_polytech_sorbonne_2025_2026/Mini_projet/quartus/top_module.vhd Line: 60
-Info (13000): Registers with preset signals will power-up high File: C:/Users/elkat/Documents/Github/Projet_FPGA_polytech_sorbonne_2025_2026/Mini_projet/quartus/detecteur_de_front.vhd Line: 14
-Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (12128): Elaborating entity "decodeur_7_seg" for hierarchy "decodeur_7_seg:AFF0" File: C:/Users/elkat/Documents/Github/Projet_FPGA_polytech_sorbonne_2025_2026/Mini_projet/quartus/top_module.vhd Line: 58
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 103 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 87 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
-    Info (21059): Implemented 45 output pins
+    Info (21059): Implemented 29 output pins
     Info (21061): Implemented 51 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4839 megabytes
-    Info: Processing ended: Wed Jan 07 16:21:15 2026
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Peak virtual memory: 4840 megabytes
+    Info: Processing ended: Wed Jan 07 16:45:07 2026
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:26
 
 

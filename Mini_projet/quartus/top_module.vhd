@@ -7,7 +7,6 @@ entity top_module is
         rst_n    : in  STD_LOGIC;
         KEY0     : in  STD_LOGIC;
         Busint   : in  STD_LOGIC_VECTOR(3 downto 0);
-        Buscode  : out STD_LOGIC_VECTOR(15 downto 0);
         HEX0 : out STD_LOGIC_VECTOR(6 downto 0);
         HEX1 : out STD_LOGIC_VECTOR(6 downto 0);
         HEX2 : out STD_LOGIC_VECTOR(6 downto 0);
@@ -50,11 +49,10 @@ begin
 
     -- On regroupe tout pour la sortie 16 bits
     buscode_interne <= q4 & q3 & q2 & q1;
-    Buscode <= buscode_interne;
     -- On appelle le comparateur 16bits
 
     U_COMP : entity work.comparateur_16bits
-        port map (Buscode=>buscode_interne, ouverture => ouverture);
+        port map (buscode_interne, ouverture);
 
     -- HEX0 : affiche les bits 0 à 3 (le dernier chiffre saisi)
     AFF0 : entity work.decodeur_7_seg

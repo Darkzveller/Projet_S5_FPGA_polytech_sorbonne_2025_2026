@@ -1,0 +1,513 @@
+|top_module
+clk => detecteur_de_front:U_DET.clk
+clk => registre_changement_parallele:REG1.clk
+clk => registre_changement_parallele:REG2.clk
+clk => registre_changement_parallele:REG3.clk
+clk => registre_changement_parallele:REG4.clk
+rst_n => detecteur_de_front:U_DET.rst_n
+rst_n => registre_changement_parallele:REG1.rst_n
+rst_n => registre_changement_parallele:REG2.rst_n
+rst_n => registre_changement_parallele:REG3.rst_n
+rst_n => registre_changement_parallele:REG4.rst_n
+KEY0 => detecteur_de_front:U_DET.KEY0
+Busint[0] => registre_changement_parallele:REG1.D[0]
+Busint[1] => registre_changement_parallele:REG1.D[1]
+Busint[2] => registre_changement_parallele:REG1.D[2]
+Busint[3] => registre_changement_parallele:REG1.D[3]
+Buscode[0] << registre_changement_parallele:REG1.Q[0]
+Buscode[1] << registre_changement_parallele:REG1.Q[1]
+Buscode[2] << registre_changement_parallele:REG1.Q[2]
+Buscode[3] << registre_changement_parallele:REG1.Q[3]
+Buscode[4] << registre_changement_parallele:REG2.Q[0]
+Buscode[5] << registre_changement_parallele:REG2.Q[1]
+Buscode[6] << registre_changement_parallele:REG2.Q[2]
+Buscode[7] << registre_changement_parallele:REG2.Q[3]
+Buscode[8] << registre_changement_parallele:REG3.Q[0]
+Buscode[9] << registre_changement_parallele:REG3.Q[1]
+Buscode[10] << registre_changement_parallele:REG3.Q[2]
+Buscode[11] << registre_changement_parallele:REG3.Q[3]
+Buscode[12] << registre_changement_parallele:REG4.Q[0]
+Buscode[13] << registre_changement_parallele:REG4.Q[1]
+Buscode[14] << registre_changement_parallele:REG4.Q[2]
+Buscode[15] << registre_changement_parallele:REG4.Q[3]
+HEX0[0] << decodeur_7_seg:AFF0.segments[0]
+HEX0[1] << decodeur_7_seg:AFF0.segments[1]
+HEX0[2] << decodeur_7_seg:AFF0.segments[2]
+HEX0[3] << decodeur_7_seg:AFF0.segments[3]
+HEX0[4] << decodeur_7_seg:AFF0.segments[4]
+HEX0[5] << decodeur_7_seg:AFF0.segments[5]
+HEX0[6] << decodeur_7_seg:AFF0.segments[6]
+HEX1[0] << decodeur_7_seg:AFF1.segments[0]
+HEX1[1] << decodeur_7_seg:AFF1.segments[1]
+HEX1[2] << decodeur_7_seg:AFF1.segments[2]
+HEX1[3] << decodeur_7_seg:AFF1.segments[3]
+HEX1[4] << decodeur_7_seg:AFF1.segments[4]
+HEX1[5] << decodeur_7_seg:AFF1.segments[5]
+HEX1[6] << decodeur_7_seg:AFF1.segments[6]
+HEX2[0] << decodeur_7_seg:AFF2.segments[0]
+HEX2[1] << decodeur_7_seg:AFF2.segments[1]
+HEX2[2] << decodeur_7_seg:AFF2.segments[2]
+HEX2[3] << decodeur_7_seg:AFF2.segments[3]
+HEX2[4] << decodeur_7_seg:AFF2.segments[4]
+HEX2[5] << decodeur_7_seg:AFF2.segments[5]
+HEX2[6] << decodeur_7_seg:AFF2.segments[6]
+HEX3[0] << decodeur_7_seg:AFF3.segments[0]
+HEX3[1] << decodeur_7_seg:AFF3.segments[1]
+HEX3[2] << decodeur_7_seg:AFF3.segments[2]
+HEX3[3] << decodeur_7_seg:AFF3.segments[3]
+HEX3[4] << decodeur_7_seg:AFF3.segments[4]
+HEX3[5] << decodeur_7_seg:AFF3.segments[5]
+HEX3[6] << decodeur_7_seg:AFF3.segments[6]
+Ouverture << comparateur_16bits:U_COMP.ouverture
+
+
+|top_module|detecteur_de_front:U_DET
+clk => Detectar~reg0.CLK
+clk => KEY0_prec.CLK
+rst_n => Detectar~reg0.ACLR
+rst_n => KEY0_prec.PRESET
+KEY0 => KEY0_prec.DATAIN
+KEY0 => process_0.IN1
+Detectar <= Detectar~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|registre_changement_parallele:REG1
+clk => bascule_d:bit0.clk
+clk => bascule_d:bit1.clk
+clk => bascule_d:bit2.clk
+clk => bascule_d:bit3.clk
+rst_n => bascule_d:bit0.rst_n
+rst_n => bascule_d:bit1.rst_n
+rst_n => bascule_d:bit2.rst_n
+rst_n => bascule_d:bit3.rst_n
+enable => bascule_d:bit0.enable
+enable => bascule_d:bit1.enable
+enable => bascule_d:bit2.enable
+enable => bascule_d:bit3.enable
+D[0] => bascule_d:bit0.D
+D[1] => bascule_d:bit1.D
+D[2] => bascule_d:bit2.D
+D[3] => bascule_d:bit3.D
+Q[0] <= bascule_d:bit0.Q
+Q[1] <= bascule_d:bit1.Q
+Q[2] <= bascule_d:bit2.Q
+Q[3] <= bascule_d:bit3.Q
+
+
+|top_module|registre_changement_parallele:REG1|bascule_D:bit0
+clk => q_interne_memoire.CLK
+rst_n => q_interne_memoire.ACLR
+D => q_interne_memoire.DATAIN
+enable => q_interne_memoire.ENA
+Q <= q_interne_memoire.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|registre_changement_parallele:REG1|bascule_D:bit1
+clk => q_interne_memoire.CLK
+rst_n => q_interne_memoire.ACLR
+D => q_interne_memoire.DATAIN
+enable => q_interne_memoire.ENA
+Q <= q_interne_memoire.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|registre_changement_parallele:REG1|bascule_D:bit2
+clk => q_interne_memoire.CLK
+rst_n => q_interne_memoire.ACLR
+D => q_interne_memoire.DATAIN
+enable => q_interne_memoire.ENA
+Q <= q_interne_memoire.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|registre_changement_parallele:REG1|bascule_D:bit3
+clk => q_interne_memoire.CLK
+rst_n => q_interne_memoire.ACLR
+D => q_interne_memoire.DATAIN
+enable => q_interne_memoire.ENA
+Q <= q_interne_memoire.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|registre_changement_parallele:REG2
+clk => bascule_d:bit0.clk
+clk => bascule_d:bit1.clk
+clk => bascule_d:bit2.clk
+clk => bascule_d:bit3.clk
+rst_n => bascule_d:bit0.rst_n
+rst_n => bascule_d:bit1.rst_n
+rst_n => bascule_d:bit2.rst_n
+rst_n => bascule_d:bit3.rst_n
+enable => bascule_d:bit0.enable
+enable => bascule_d:bit1.enable
+enable => bascule_d:bit2.enable
+enable => bascule_d:bit3.enable
+D[0] => bascule_d:bit0.D
+D[1] => bascule_d:bit1.D
+D[2] => bascule_d:bit2.D
+D[3] => bascule_d:bit3.D
+Q[0] <= bascule_d:bit0.Q
+Q[1] <= bascule_d:bit1.Q
+Q[2] <= bascule_d:bit2.Q
+Q[3] <= bascule_d:bit3.Q
+
+
+|top_module|registre_changement_parallele:REG2|bascule_D:bit0
+clk => q_interne_memoire.CLK
+rst_n => q_interne_memoire.ACLR
+D => q_interne_memoire.DATAIN
+enable => q_interne_memoire.ENA
+Q <= q_interne_memoire.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|registre_changement_parallele:REG2|bascule_D:bit1
+clk => q_interne_memoire.CLK
+rst_n => q_interne_memoire.ACLR
+D => q_interne_memoire.DATAIN
+enable => q_interne_memoire.ENA
+Q <= q_interne_memoire.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|registre_changement_parallele:REG2|bascule_D:bit2
+clk => q_interne_memoire.CLK
+rst_n => q_interne_memoire.ACLR
+D => q_interne_memoire.DATAIN
+enable => q_interne_memoire.ENA
+Q <= q_interne_memoire.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|registre_changement_parallele:REG2|bascule_D:bit3
+clk => q_interne_memoire.CLK
+rst_n => q_interne_memoire.ACLR
+D => q_interne_memoire.DATAIN
+enable => q_interne_memoire.ENA
+Q <= q_interne_memoire.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|registre_changement_parallele:REG3
+clk => bascule_d:bit0.clk
+clk => bascule_d:bit1.clk
+clk => bascule_d:bit2.clk
+clk => bascule_d:bit3.clk
+rst_n => bascule_d:bit0.rst_n
+rst_n => bascule_d:bit1.rst_n
+rst_n => bascule_d:bit2.rst_n
+rst_n => bascule_d:bit3.rst_n
+enable => bascule_d:bit0.enable
+enable => bascule_d:bit1.enable
+enable => bascule_d:bit2.enable
+enable => bascule_d:bit3.enable
+D[0] => bascule_d:bit0.D
+D[1] => bascule_d:bit1.D
+D[2] => bascule_d:bit2.D
+D[3] => bascule_d:bit3.D
+Q[0] <= bascule_d:bit0.Q
+Q[1] <= bascule_d:bit1.Q
+Q[2] <= bascule_d:bit2.Q
+Q[3] <= bascule_d:bit3.Q
+
+
+|top_module|registre_changement_parallele:REG3|bascule_D:bit0
+clk => q_interne_memoire.CLK
+rst_n => q_interne_memoire.ACLR
+D => q_interne_memoire.DATAIN
+enable => q_interne_memoire.ENA
+Q <= q_interne_memoire.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|registre_changement_parallele:REG3|bascule_D:bit1
+clk => q_interne_memoire.CLK
+rst_n => q_interne_memoire.ACLR
+D => q_interne_memoire.DATAIN
+enable => q_interne_memoire.ENA
+Q <= q_interne_memoire.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|registre_changement_parallele:REG3|bascule_D:bit2
+clk => q_interne_memoire.CLK
+rst_n => q_interne_memoire.ACLR
+D => q_interne_memoire.DATAIN
+enable => q_interne_memoire.ENA
+Q <= q_interne_memoire.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|registre_changement_parallele:REG3|bascule_D:bit3
+clk => q_interne_memoire.CLK
+rst_n => q_interne_memoire.ACLR
+D => q_interne_memoire.DATAIN
+enable => q_interne_memoire.ENA
+Q <= q_interne_memoire.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|registre_changement_parallele:REG4
+clk => bascule_d:bit0.clk
+clk => bascule_d:bit1.clk
+clk => bascule_d:bit2.clk
+clk => bascule_d:bit3.clk
+rst_n => bascule_d:bit0.rst_n
+rst_n => bascule_d:bit1.rst_n
+rst_n => bascule_d:bit2.rst_n
+rst_n => bascule_d:bit3.rst_n
+enable => bascule_d:bit0.enable
+enable => bascule_d:bit1.enable
+enable => bascule_d:bit2.enable
+enable => bascule_d:bit3.enable
+D[0] => bascule_d:bit0.D
+D[1] => bascule_d:bit1.D
+D[2] => bascule_d:bit2.D
+D[3] => bascule_d:bit3.D
+Q[0] <= bascule_d:bit0.Q
+Q[1] <= bascule_d:bit1.Q
+Q[2] <= bascule_d:bit2.Q
+Q[3] <= bascule_d:bit3.Q
+
+
+|top_module|registre_changement_parallele:REG4|bascule_D:bit0
+clk => q_interne_memoire.CLK
+rst_n => q_interne_memoire.ACLR
+D => q_interne_memoire.DATAIN
+enable => q_interne_memoire.ENA
+Q <= q_interne_memoire.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|registre_changement_parallele:REG4|bascule_D:bit1
+clk => q_interne_memoire.CLK
+rst_n => q_interne_memoire.ACLR
+D => q_interne_memoire.DATAIN
+enable => q_interne_memoire.ENA
+Q <= q_interne_memoire.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|registre_changement_parallele:REG4|bascule_D:bit2
+clk => q_interne_memoire.CLK
+rst_n => q_interne_memoire.ACLR
+D => q_interne_memoire.DATAIN
+enable => q_interne_memoire.ENA
+Q <= q_interne_memoire.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|registre_changement_parallele:REG4|bascule_D:bit3
+clk => q_interne_memoire.CLK
+rst_n => q_interne_memoire.ACLR
+D => q_interne_memoire.DATAIN
+enable => q_interne_memoire.ENA
+Q <= q_interne_memoire.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|comparateur_16bits:U_COMP
+Buscode[0] => comparateur_4bits:comp0.Datautil[0]
+Buscode[1] => comparateur_4bits:comp0.Datautil[1]
+Buscode[2] => comparateur_4bits:comp0.Datautil[2]
+Buscode[3] => comparateur_4bits:comp0.Datautil[3]
+Buscode[4] => comparateur_4bits:comp1.Datautil[0]
+Buscode[5] => comparateur_4bits:comp1.Datautil[1]
+Buscode[6] => comparateur_4bits:comp1.Datautil[2]
+Buscode[7] => comparateur_4bits:comp1.Datautil[3]
+Buscode[8] => comparateur_4bits:comp2.Datautil[0]
+Buscode[9] => comparateur_4bits:comp2.Datautil[1]
+Buscode[10] => comparateur_4bits:comp2.Datautil[2]
+Buscode[11] => comparateur_4bits:comp2.Datautil[3]
+Buscode[12] => comparateur_4bits:comp3.Datautil[0]
+Buscode[13] => comparateur_4bits:comp3.Datautil[1]
+Buscode[14] => comparateur_4bits:comp3.Datautil[2]
+Buscode[15] => comparateur_4bits:comp3.Datautil[3]
+ouverture <= ouverture.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|comparateur_16bits:U_COMP|comparateur_4bits:comp0
+Datautil[0] => Equal0.IN3
+Datautil[1] => Equal0.IN2
+Datautil[2] => Equal0.IN1
+Datautil[3] => Equal0.IN0
+Dataamd[0] => Equal0.IN7
+Dataamd[1] => Equal0.IN6
+Dataamd[2] => Equal0.IN5
+Dataamd[3] => Equal0.IN4
+CompOK <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|comparateur_16bits:U_COMP|comparateur_4bits:comp1
+Datautil[0] => Equal0.IN3
+Datautil[1] => Equal0.IN2
+Datautil[2] => Equal0.IN1
+Datautil[3] => Equal0.IN0
+Dataamd[0] => Equal0.IN7
+Dataamd[1] => Equal0.IN6
+Dataamd[2] => Equal0.IN5
+Dataamd[3] => Equal0.IN4
+CompOK <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|comparateur_16bits:U_COMP|comparateur_4bits:comp2
+Datautil[0] => Equal0.IN3
+Datautil[1] => Equal0.IN2
+Datautil[2] => Equal0.IN1
+Datautil[3] => Equal0.IN0
+Dataamd[0] => Equal0.IN7
+Dataamd[1] => Equal0.IN6
+Dataamd[2] => Equal0.IN5
+Dataamd[3] => Equal0.IN4
+CompOK <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|comparateur_16bits:U_COMP|comparateur_4bits:comp3
+Datautil[0] => Equal0.IN3
+Datautil[1] => Equal0.IN2
+Datautil[2] => Equal0.IN1
+Datautil[3] => Equal0.IN0
+Dataamd[0] => Equal0.IN7
+Dataamd[1] => Equal0.IN6
+Dataamd[2] => Equal0.IN5
+Dataamd[3] => Equal0.IN4
+CompOK <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|decodeur_7_seg:AFF0
+entree_4bits[0] => Mux0.IN19
+entree_4bits[0] => Mux1.IN19
+entree_4bits[0] => Mux2.IN19
+entree_4bits[0] => Mux3.IN19
+entree_4bits[0] => Mux4.IN19
+entree_4bits[0] => Mux5.IN19
+entree_4bits[0] => Mux6.IN19
+entree_4bits[1] => Mux0.IN18
+entree_4bits[1] => Mux1.IN18
+entree_4bits[1] => Mux2.IN18
+entree_4bits[1] => Mux3.IN18
+entree_4bits[1] => Mux4.IN18
+entree_4bits[1] => Mux5.IN18
+entree_4bits[1] => Mux6.IN18
+entree_4bits[2] => Mux0.IN17
+entree_4bits[2] => Mux1.IN17
+entree_4bits[2] => Mux2.IN17
+entree_4bits[2] => Mux3.IN17
+entree_4bits[2] => Mux4.IN17
+entree_4bits[2] => Mux5.IN17
+entree_4bits[2] => Mux6.IN17
+entree_4bits[3] => Mux0.IN16
+entree_4bits[3] => Mux1.IN16
+entree_4bits[3] => Mux2.IN16
+entree_4bits[3] => Mux3.IN16
+entree_4bits[3] => Mux4.IN16
+entree_4bits[3] => Mux5.IN16
+entree_4bits[3] => Mux6.IN16
+segments[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|decodeur_7_seg:AFF1
+entree_4bits[0] => Mux0.IN19
+entree_4bits[0] => Mux1.IN19
+entree_4bits[0] => Mux2.IN19
+entree_4bits[0] => Mux3.IN19
+entree_4bits[0] => Mux4.IN19
+entree_4bits[0] => Mux5.IN19
+entree_4bits[0] => Mux6.IN19
+entree_4bits[1] => Mux0.IN18
+entree_4bits[1] => Mux1.IN18
+entree_4bits[1] => Mux2.IN18
+entree_4bits[1] => Mux3.IN18
+entree_4bits[1] => Mux4.IN18
+entree_4bits[1] => Mux5.IN18
+entree_4bits[1] => Mux6.IN18
+entree_4bits[2] => Mux0.IN17
+entree_4bits[2] => Mux1.IN17
+entree_4bits[2] => Mux2.IN17
+entree_4bits[2] => Mux3.IN17
+entree_4bits[2] => Mux4.IN17
+entree_4bits[2] => Mux5.IN17
+entree_4bits[2] => Mux6.IN17
+entree_4bits[3] => Mux0.IN16
+entree_4bits[3] => Mux1.IN16
+entree_4bits[3] => Mux2.IN16
+entree_4bits[3] => Mux3.IN16
+entree_4bits[3] => Mux4.IN16
+entree_4bits[3] => Mux5.IN16
+entree_4bits[3] => Mux6.IN16
+segments[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|decodeur_7_seg:AFF2
+entree_4bits[0] => Mux0.IN19
+entree_4bits[0] => Mux1.IN19
+entree_4bits[0] => Mux2.IN19
+entree_4bits[0] => Mux3.IN19
+entree_4bits[0] => Mux4.IN19
+entree_4bits[0] => Mux5.IN19
+entree_4bits[0] => Mux6.IN19
+entree_4bits[1] => Mux0.IN18
+entree_4bits[1] => Mux1.IN18
+entree_4bits[1] => Mux2.IN18
+entree_4bits[1] => Mux3.IN18
+entree_4bits[1] => Mux4.IN18
+entree_4bits[1] => Mux5.IN18
+entree_4bits[1] => Mux6.IN18
+entree_4bits[2] => Mux0.IN17
+entree_4bits[2] => Mux1.IN17
+entree_4bits[2] => Mux2.IN17
+entree_4bits[2] => Mux3.IN17
+entree_4bits[2] => Mux4.IN17
+entree_4bits[2] => Mux5.IN17
+entree_4bits[2] => Mux6.IN17
+entree_4bits[3] => Mux0.IN16
+entree_4bits[3] => Mux1.IN16
+entree_4bits[3] => Mux2.IN16
+entree_4bits[3] => Mux3.IN16
+entree_4bits[3] => Mux4.IN16
+entree_4bits[3] => Mux5.IN16
+entree_4bits[3] => Mux6.IN16
+segments[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_module|decodeur_7_seg:AFF3
+entree_4bits[0] => Mux0.IN19
+entree_4bits[0] => Mux1.IN19
+entree_4bits[0] => Mux2.IN19
+entree_4bits[0] => Mux3.IN19
+entree_4bits[0] => Mux4.IN19
+entree_4bits[0] => Mux5.IN19
+entree_4bits[0] => Mux6.IN19
+entree_4bits[1] => Mux0.IN18
+entree_4bits[1] => Mux1.IN18
+entree_4bits[1] => Mux2.IN18
+entree_4bits[1] => Mux3.IN18
+entree_4bits[1] => Mux4.IN18
+entree_4bits[1] => Mux5.IN18
+entree_4bits[1] => Mux6.IN18
+entree_4bits[2] => Mux0.IN17
+entree_4bits[2] => Mux1.IN17
+entree_4bits[2] => Mux2.IN17
+entree_4bits[2] => Mux3.IN17
+entree_4bits[2] => Mux4.IN17
+entree_4bits[2] => Mux5.IN17
+entree_4bits[2] => Mux6.IN17
+entree_4bits[3] => Mux0.IN16
+entree_4bits[3] => Mux1.IN16
+entree_4bits[3] => Mux2.IN16
+entree_4bits[3] => Mux3.IN16
+entree_4bits[3] => Mux4.IN16
+entree_4bits[3] => Mux5.IN16
+entree_4bits[3] => Mux6.IN16
+segments[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

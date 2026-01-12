@@ -11,7 +11,6 @@ end entity;
 architecture Behavioral of decodeur_7_seg is
 begin
     -- On utilise un "with...select" pour faire la table de correspondance
-    -- C'est la méthode la plus simple pour un débutant (comme un tableau)
     -- L'ordre des segments en sortie : "gfedcba"
     -- '0' = Allumé, '1' = Éteint (Logique pour carte DE10-Lite)
     

@@ -13,80 +13,80 @@ Z1 w1766445812
 Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-R0
-Z5 8bascule_d.vhd
-Z6 Fbascule_d.vhd
+Z5 dC:/Users/elkat/Documents/Github/Projet_FPGA_polytech_sorbonne_2025_2026/Mini_projet/Modelsim/Bascule_d
+Z6 8bascule_d.vhd
+Z7 Fbascule_d.vhd
 l0
 L5
 V<^YPQY3cL;aE^`0<VN7C73
 !s100 ]OXG>DEQMk_5?Q7U[_UW31
-Z7 OV;C;10.5b;63
+Z8 OV;C;10.5b;63
 31
-Z8 !s110 1766446057
+Z9 !s110 1768689773
 !i10b 1
-Z9 !s108 1766446057.000000
-Z10 !s90 -reportprogress|300|-93|bascule_d.vhd|
-Z11 !s107 bascule_d.vhd|
+Z10 !s108 1768689773.000000
+Z11 !s90 -reportprogress|300|-93|bascule_d.vhd|
+Z12 !s107 bascule_d.vhd|
 !i113 1
 o-93
-Z12 tExplicit 1 CvgOpt 0
+Z13 tExplicit 1 CvgOpt 0
 Abehavioral
 R2
 R3
 R4
-Z13 DEx4 work 9 bascule_d 0 22 <^YPQY3cL;aE^`0<VN7C73
+Z14 DEx4 work 9 bascule_d 0 22 <^YPQY3cL;aE^`0<VN7C73
 l17
 L14
 VBgzdXN3IBdWWg;PUehQ[[1
 !s100 O6ho[Ff_CA<EFbT>;<^Wc0
-R7
-31
 R8
-!i10b 1
+31
 R9
+!i10b 1
 R10
 R11
+R12
 !i113 1
 o-93
-R12
+R13
 Etb_bascule_d
-Z14 w1766445528
+Z15 w1766445528
 R3
 R4
-R0
-Z15 8bascule_d_tb.vhd
-Z16 Fbascule_d_tb.vhd
+R5
+Z16 8bascule_d_tb.vhd
+Z17 Fbascule_d_tb.vhd
 l0
 L4
 VN<;dJ`M4B00^JI6NHhG;U2
 !s100 45GOYbZ0@KDQ=PmNHJcI61
-R7
-31
 R8
-!i10b 1
+31
 R9
-Z17 !s90 -reportprogress|300|-93|bascule_d_tb.vhd|
-Z18 !s107 bascule_d_tb.vhd|
+!i10b 1
+R10
+Z18 !s90 -reportprogress|300|-93|bascule_d_tb.vhd|
+Z19 !s107 bascule_d_tb.vhd|
 !i113 1
 o-93
-R12
+R13
 Atest
 R2
-R13
+R14
 R3
 R4
-DEx4 work 12 tb_bascule_d 0 22 N<;dJ`M4B00^JI6NHhG;U2
+Z20 DEx4 work 12 tb_bascule_d 0 22 N<;dJ`M4B00^JI6NHhG;U2
 l9
 L7
-V1=o0zdAHOhW]jUbmWTk342
-!s100 c:9GzXkl_RkBn0bnjV0Ma2
-R7
+Z21 V1=o0zdAHOhW]jUbmWTk342
+Z22 !s100 c:9GzXkl_RkBn0bnjV0Ma2
+R8
 31
-!s110 1766446058
-!i10b 1
 R9
-R17
+!i10b 1
+R10
 R18
+R19
 !i113 1
 o-93
-R12
+R13

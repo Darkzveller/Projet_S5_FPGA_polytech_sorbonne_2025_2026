@@ -24,10 +24,10 @@ if rst_n = '0' then
 
 elsif rising_edge(clk) then
 
-    if KEY0 = '1' and KEY0_prec = '0' then
+    if KEY0 = '0' and KEY0_prec = '1' then
         Detectar <= '1'; 
     else 
-    Detectar <= '0';
+        Detectar <= '0';
     end if;
     KEY0_prec <= KEY0; 
 

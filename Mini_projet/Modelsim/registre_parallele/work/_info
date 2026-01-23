@@ -22,9 +22,9 @@ V<^YPQY3cL;aE^`0<VN7C73
 !s100 ]OXG>DEQMk_5?Q7U[_UW31
 Z8 OV;C;10.5b;63
 31
-Z9 !s110 1766508342
+Z9 !s110 1768842388
 !i10b 1
-Z10 !s108 1766508342.000000
+Z10 !s108 1768842387.000000
 Z11 !s90 -reportprogress|300|-93|bascule_d.vhd|
 Z12 !s107 bascule_d.vhd|
 !i113 1
@@ -62,9 +62,9 @@ V]FjfJm8Zd1K0=>gfJHAO10
 !s100 @zD5Wj5fQ3JPWbQh?EKjQ1
 R8
 31
-Z18 !s110 1766508343
+R9
 !i10b 1
-R10
+Z18 !s108 1768842388.000000
 Z19 !s90 -reportprogress|300|-93|registre_changement_parallele.vhd|
 Z20 !s107 registre_changement_parallele.vhd|
 !i113 1
@@ -82,9 +82,9 @@ V0I6Bf?i3RKiWQoO3cZKXC2
 !s100 zl8ma=2LhBYjR_3B6MKMN1
 R8
 31
-R18
+R9
 !i10b 1
-R10
+R18
 R19
 R20
 !i113 1
@@ -94,16 +94,16 @@ Abehavioral
 R2
 R3
 R4
-Z22 DEx4 work 29 registre_changement_parallele 0 22 nhB=S>c=?Ueh:4:kROFML2
+DEx4 work 29 registre_changement_parallele 0 22 nhB=S>c=?Ueh:4:kROFML2
 l17
 L14
 Vl5LAKG3_1dnoUZ<4m9FDC3
 !s100 kXS?f4YclY4aJCcFR@cg41
 R8
 31
-Z23 !s110 1766447065
+!s110 1766447065
 !i10b 1
-Z24 !s108 1766447065.000000
+!s108 1766447065.000000
 R19
 R20
 !i113 1
@@ -112,23 +112,23 @@ R13
 R0
 w1766446921
 Etb_registre
-Z25 w1766446579
+Z22 w1766446579
 R3
 R4
 R5
-Z26 8registre_changement_parallele_tb.vhd
-Z27 Fregistre_changement_parallele_tb.vhd
+Z23 8registre_changement_parallele_tb.vhd
+Z24 Fregistre_changement_parallele_tb.vhd
 l0
 L4
 VAK7;obH2o9c9RCKTEkbnh2
 !s100 6;`VRoi60PF7e05:d^[e53
 R8
 31
-R18
+R9
 !i10b 1
-Z28 !s108 1766508343.000000
-Z29 !s90 -reportprogress|300|-93|registre_changement_parallele_tb.vhd|
-Z30 !s107 registre_changement_parallele_tb.vhd|
+R18
+Z25 !s90 -reportprogress|300|-93|registre_changement_parallele_tb.vhd|
+Z26 !s107 registre_changement_parallele_tb.vhd|
 !i113 1
 o-93
 R13
@@ -136,18 +136,18 @@ Atest
 R21
 R3
 R4
-Z31 DEx4 work 11 tb_registre 0 22 AK7;obH2o9c9RCKTEkbnh2
+Z27 DEx4 work 11 tb_registre 0 22 AK7;obH2o9c9RCKTEkbnh2
 l10
 L7
-Z32 VF^^H9kURN7NJEL1JG^`RH3
-Z33 !s100 l3W9_QJboo>65e`0KeFBg3
+Z28 VF^^H9kURN7NJEL1JG^`RH3
+Z29 !s100 l3W9_QJboo>65e`0KeFBg3
 R8
 31
-R18
+R9
 !i10b 1
-R28
-R29
-R30
+R18
+R25
+R26
 !i113 1
 o-93
 R13

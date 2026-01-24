@@ -15,7 +15,6 @@ architecture Structural of registre_changement_parallele is
 begin
 
     -- On branche les 4 bascules D une par une
-    -- C'est ce qu'on appelle l'instanciation manuelle
     
     bit0 : entity work.bascule_D
         port map (clk => clk, rst_n => rst_n, enable => enable, D => D(0), Q => Q(0));

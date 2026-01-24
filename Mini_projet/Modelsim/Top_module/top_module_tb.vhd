@@ -12,8 +12,6 @@ architecture Behavioral of top_module_tb is
     signal HEX0, HEX1, HEX2, HEX3 : STD_LOGIC_VECTOR(6 downto 0);
     signal Ouverture : STD_LOGIC;
 
-    -- Période de 2000 ps (équivalent à 500 MHz, très rapide mais stable)
-    constant clk_period : time := 2000 ps;
 
 begin
     uut: entity work.top_module
@@ -25,8 +23,8 @@ begin
 
     clk_process : process
     begin
-        clk <= '0'; wait for clk_period/2;
-        clk <= '1'; wait for clk_period/2;
+        clk <= '0'; wait for 1000 ps;
+        clk <= '1'; wait for 1000 ps;
     end process;
 
     stim_proc: process
@@ -55,7 +53,7 @@ begin
         rst_n <= '0'; wait for 5000 ps;
         rst_n <= '1'; wait for 5000 ps;
 
-        -- Saisie '1'
+        -- Saisie '15<=>F'
         Busint <= "1111"; wait for 2000 ps;
         KEY0 <= '1'; wait for 6000 ps; KEY0 <= '0'; wait for 4000 ps;
 

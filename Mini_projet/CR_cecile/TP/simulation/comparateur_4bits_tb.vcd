@@ -1,0 +1,69 @@
+$date
+  Fri Jan  2 11:29:01 2026
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$scope module standard $end
+$upscope $end
+$scope module std_logic_1164 $end
+$upscope $end
+$scope module numeric_std $end
+$upscope $end
+$scope module comparateur_4bits_tb $end
+$var reg 4 ! input_tb[3:0] $end
+$var reg 4 " code_tb[3:0] $end
+$var reg 1 # output_tb $end
+$var reg 1 $ finished $end
+$scope module uut $end
+$var reg 4 % input[3:0] $end
+$var reg 4 & code[3:0] $end
+$var reg 1 ' output $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+b0000 !
+b1010 "
+0#
+0$
+b0000 %
+b1010 &
+0'
+#10000000
+b0001 !
+b0001 %
+#20000000
+b0010 !
+b0010 %
+#30000000
+b0011 !
+b0011 %
+#40000000
+b0100 !
+b0100 %
+#50000000
+b0101 !
+b0101 %
+#60000000
+b0110 !
+b0110 %
+#70000000
+b0111 !
+b0111 %
+#80000000
+b1000 !
+b1000 %
+#90000000
+b1001 !
+b1001 %
+#100000000
+b1010 !
+1#
+b1010 %
+1'
+#110000000
+1$

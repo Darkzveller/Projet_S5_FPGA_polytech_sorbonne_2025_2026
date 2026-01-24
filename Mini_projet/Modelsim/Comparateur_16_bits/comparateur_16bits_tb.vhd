@@ -13,11 +13,11 @@ begin
 
     process
     begin
-        -- Test 1 : Mauvais code (ex: 8421)
+        -- Test 1 : Mauvais code 8421 
         tb_bus <= "1000010000100001"; 
         wait for 20 ps;
 
-        -- Test 2 : Bon code (1234 en hexadécimal -> 0001 0010 0011 0100)
+        -- Test 2 : Bon code 1234 
         tb_bus <= "0001001000110100"; 
         wait for 20 ps;
         

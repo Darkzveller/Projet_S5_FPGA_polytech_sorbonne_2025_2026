@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/elkat/Documents/Github/Projet_FPGA_polytech_sorbonne_2025_2026/Mini_projet/Modelsim/Comparateur_4_bis
 Ecomparateur_4bits
-Z1 w1766510435
+Z1 w1769284848
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
@@ -21,9 +21,9 @@ VeGTX8icF`_Ch1N0RlZ<8]0
 !s100 E_T^h``PeTo1=I3SZI?VC0
 Z6 OV;C;10.5b;63
 31
-Z7 !s110 1766510566
+Z7 !s110 1769285011
 !i10b 1
-Z8 !s108 1766510566.000000
+Z8 !s108 1769285011.000000
 Z9 !s90 -reportprogress|300|-93|comparateur_4bits.vhd|
 Z10 !s107 comparateur_4bits.vhd|
 !i113 1
@@ -60,11 +60,11 @@ Va_ENfFj9f3b@W:a:Z^5fX1
 !s100 :WFkj=SZAl^G;zXDO;g?51
 R6
 31
-R7
+Z16 !s110 1769285012
 !i10b 1
-R8
-Z16 !s90 -reportprogress|300|-93|comparateur_4bits_tb.vhd|
-Z17 !s107 comparateur_4bits_tb.vhd|
+Z17 !s108 1769285012.000000
+Z18 !s90 -reportprogress|300|-93|comparateur_4bits_tb.vhd|
+Z19 !s107 comparateur_4bits_tb.vhd|
 !i113 1
 o-93
 R11
@@ -72,18 +72,18 @@ Abehavioral
 R12
 R2
 R3
-DEx4 work 14 tb_comparateur 0 22 a_ENfFj9f3b@W:a:Z^5fX1
+Z20 DEx4 work 14 tb_comparateur 0 22 a_ENfFj9f3b@W:a:Z^5fX1
 l10
 L7
-VC`^b2mf9@gPTCf:cBaS?j1
-!s100 :M>z2RYZ`0?BeR1l[V4ff1
+Z21 VC`^b2mf9@gPTCf:cBaS?j1
+Z22 !s100 :M>z2RYZ`0?BeR1l[V4ff1
 R6
 31
-R7
-!i10b 1
-R8
 R16
+!i10b 1
 R17
+R18
+R19
 !i113 1
 o-93
 R11

@@ -1,5 +1,3 @@
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
@@ -13,6 +11,6 @@ end entity;
 
 architecture Behavioral of comparateur_4bits is
 begin
-    -- La sortie CompOK prend la valeur '1' SEULEMENT si les deux entrées sont égales
+    -- La sortie CompOK prend la valeur '1' suelement si les deux entrées sont égales
     CompOK <= '1' when (Datautil = Dataamd) else '0';
 end architecture;

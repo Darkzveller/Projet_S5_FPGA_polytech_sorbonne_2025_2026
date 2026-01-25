@@ -1,26 +1,25 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Un test bench n'a pas de ports (entrées/sorties physiques)
 entity tb_decodeur_7_seg is
 end entity;
 
 architecture Behavioral of tb_decodeur_7_seg is
 
-    -- 1. Déclaration des signaux pour "brancher" le décodeur
+    -- Déclaration des signaux pour connecter le décodeur en entrée et en sortie
     signal tb_entree  : STD_LOGIC_VECTOR(3 downto 0) := "0000";
     signal tb_segments : STD_LOGIC_VECTOR(6 downto 0);
 
 begin
 
-    -- 2. Instanciation du décodeur (on branche l'appareil)
+    -- Instanciation du décodeur (normalement on branche l'appareil)
     UUT : entity work.decodeur_7_seg
         port map (
             entree_4bits => tb_entree,
             segments     => tb_segments
         );
 
-    -- 3. Le processus de test (le scénario)
+    -- Le processus de test
     process
     begin
         -- Test du chiffre 0
@@ -43,7 +42,7 @@ begin
         tb_entree <= "1010";
         wait for 20 ps;
 
-        -- Fin du test (on s'arrête)
+        -- Fin du test (on attends a l'infini)
         wait;
     end process;
 

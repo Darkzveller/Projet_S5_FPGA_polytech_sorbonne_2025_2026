@@ -29,7 +29,7 @@ begin
     comp3 : entity work.comparateur_4bits
         port map ( Datautil => Buscode(15 downto 12), Dataamd => "0001", CompOK => ok3 );
 
-    -- Logique de combinaison : Porte ET
+    -- Porte ET
     ouverture <= ok0 and ok1 and ok2 and ok3;
 
 end architecture;

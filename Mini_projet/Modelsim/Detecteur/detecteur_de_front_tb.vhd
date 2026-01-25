@@ -11,7 +11,7 @@ architecture BENCH of tb_detecteur is
 
 begin
 
-    -- Instanciation du DUT
+    -- Instanciation du UUT pour unit uder tests
     UUT: entity work.detecteur_de_front
         port map (
             clk     => clk,
@@ -23,10 +23,10 @@ begin
     -- Génération de l'horloge
     clk <= not clk after 5 ps;
 
-    -- Process principal avec tests et assertions
+    -- Process principal avec tests
     process
     begin
-        -- Test 1 : Reset actif
+        -- Test 1 : Reset enfoncé
         rst_n <= '0';
         KEY0 <= '1';
         wait for 15 ps;

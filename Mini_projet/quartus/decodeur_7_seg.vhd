@@ -10,6 +10,7 @@ end entity;
 
 architecture Behavioral of decodeur_7_seg is
 begin
+    -- Segment fonctionnant en pull-down
     -- '0' = Allumé, '1' = Éteint 
     
     with entree_4bits select
@@ -29,5 +30,5 @@ begin
                     "0100001" when "1101", -- d
                     "0000110" when "1110", -- E
                     "0001110" when "1111", -- F
-                    "1111111" when others; -- Éteint par sécurité
+                    "1111111" when others; -- Éteint par sécurité/état initial
 end architecture;
